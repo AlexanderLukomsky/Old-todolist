@@ -1,14 +1,15 @@
-import { ChangeEvent, KeyboardEvent } from "react"
+import React, { ChangeEvent } from "react"
 
 type PropsType = {
-  value: string
-  callback: (e: ChangeEvent<HTMLInputElement>) => void
-  callback2?: (e: KeyboardEvent<HTMLInputElement>) => void
+  onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void
+  taskValue: string
 }
-export const Input = ({ value, callback, callback2 }: PropsType) => {
-
-
+export const Input = ({ onChangeHandler, taskValue }: PropsType) => {
   return (
-    <input value={value} onChange={callback} onKeyPress={callback2} />
+    <input
+      type='text'
+      value={taskValue}
+      onChange={onChangeHandler}
+    />
   )
 }
