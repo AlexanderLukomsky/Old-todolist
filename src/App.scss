@@ -1,71 +1,88 @@
-body > div {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px;
+//------reset-css-start----//
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-ul {
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
   list-style: none;
 }
-.item {
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  &__checkbox {
-    display: none;
-  }
-  &__label {
-    display: block;
-    position: relative;
-    margin: 0px 10px;
-    width: 100%;
-    cursor: pointer;
-  }
-  &__checkbox-style {
-    display: inline-block;
-    height: 18px;
-    width: 18px;
-    border: 1px solid #615e5e;
-    background-color: #ffff;
-    position: relative;
-    margin-right: 11px;
-    cursor: pointer;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      height: 18px;
-      width: 18px;
-      background: #000;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: 0.3s;
-      box-shadow: 0 0 0 0.2rem rgba(38, 39, 38, 0.25);
-    }
-    &::after {
-      content: "X";
-      font-weight: 700;
-      position: absolute;
-      color: #fff;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-  }
-  &__checkbox:checked + &__checkbox-style::before {
-    opacity: 1;
-  }
-  &__checkbox:checked + &__checkbox-style::after {
-    opacity: 1;
-  }
-  button {
-    min-width: 50px;
-    background: #000;
-    color: #fff;
-  }
+
+img {
+  vertical-align: top;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+//------reset-css-end----//
